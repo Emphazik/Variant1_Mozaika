@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35828.75 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Variant1_Mozaika", "Variant1_Mozaika\Variant1_Mozaika.csproj", "{861CF5D7-A2CC-4613-9310-D634AA198940}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{861CF5D7-A2CC-4613-9310-D634AA198940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{861CF5D7-A2CC-4613-9310-D634AA198940}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{861CF5D7-A2CC-4613-9310-D634AA198940}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{861CF5D7-A2CC-4613-9310-D634AA198940}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C5DB2030-8531-4306-BDAE-67F6A4155E8C}
+	EndGlobalSection
+EndGlobal
