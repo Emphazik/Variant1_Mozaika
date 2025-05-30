@@ -32,8 +32,6 @@ namespace Variant1_Mozaika.Models
         public virtual ICollection<MaterialSuppliers> MaterialSuppliers { get; set; }
         public virtual Units Units { get; set; }
 
-        // Реализация IDataErrorInfo для валидации
-        public string Error => null;
         public class MaterialViewModel
         {
             public int MaterialID { get; set; }
@@ -45,44 +43,6 @@ namespace Variant1_Mozaika.Models
             public decimal PackageQuantity { get; set; }
             public string UnitName { get; set; }
             public decimal BatchCost { get; set; }
-        }
-        public string this[string columnName]
-        {
-            get
-            {
-                switch (columnName)
-                {
-                    case nameof(MaterialName):
-                        if (string.IsNullOrWhiteSpace(MaterialName))
-                            return "Наименование материала не может быть пустым.";
-                        break;
-                    case nameof(MaterialTypeID):
-                        if (MaterialTypeID <= 0)
-                            return "Выберите тип материала.";
-                        break;
-                    case nameof(UnitID):
-                        if (UnitID <= 0)
-                            return "Выберите единицу измерения.";
-                        break;
-                    case nameof(StockQuantity):
-                        if (StockQuantity < 0)
-                            return "Количество на складе должно быть неотрицательным.";
-                        break;
-                    case nameof(PackageQuantity):
-                        if (PackageQuantity <= 0)
-                            return "Количество в упаковке должно быть положительным.";
-                        break;
-                    case nameof(MinimumQuantity):
-                        if (MinimumQuantity < 0)
-                            return "Минимальное количество должно быть неотрицательным.";
-                        break;
-                    case nameof(UnitPrice):
-                        if (UnitPrice < 0)
-                            return "Цена единицы материала должна быть неотрицательной.";
-                        break;
-                }
-                return null;
-            }
         }
 
     }

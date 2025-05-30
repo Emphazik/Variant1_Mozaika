@@ -9,9 +9,7 @@
         Icon="/Images/Мозаика.ico"
         Background="#FFFFFF"
         FontFamily="Comic Sans MS">
-    <Window.Resources>
-        <local:DecimalConverter x:Key="DecimalConverter"/>
-    </Window.Resources>
+    
     <Grid Margin="10">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -36,39 +34,31 @@
         <StackPanel Grid.Row="1" Background="#FFFFFF">
             <Label Content="Наименование материала:" Foreground="#546F94"/>
             <TextBox x:Name="MaterialNameTextBox" Margin="5" 
-                     Text="{Binding MaterialName, UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+                     Text="{Binding MaterialName, UpdateSourceTrigger=PropertyChanged}"/>
 
             <Label Content="Тип материала:" Foreground="#546F94"/>
             <ComboBox x:Name="MaterialTypeComboBox" Margin="5" 
                       DisplayMemberPath="MaterialTypeName" 
                       SelectedValuePath="MaterialTypeID" 
-                      SelectedValue="{Binding MaterialTypeID, ValidatesOnDataErrors=True}"/>
+                      SelectedValue="{Binding MaterialTypeID}"/>
 
             <Label Content="Количество на складе:" Foreground="#546F94"/>
-            <TextBox x:Name="StockQuantityTextBox" Margin="5" 
-                     Text="{Binding StockQuantity, Converter={StaticResource DecimalConverter}, 
-                                    UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <TextBox x:Name="StockQuantityTextBox" Margin="5"/>
 
             <Label Content="Единица измерения:" Foreground="#546F94"/>
             <ComboBox x:Name="UnitComboBox" Margin="5" 
                       DisplayMemberPath="UnitName" 
                       SelectedValuePath="UnitID" 
-                      SelectedValue="{Binding UnitID, ValidatesOnDataErrors=True}"/>
+                      SelectedValue="{Binding UnitID}"/>
 
             <Label Content="Количество в упаковке:" Foreground="#546F94"/>
-            <TextBox x:Name="PackageQuantityTextBox" Margin="5" 
-                     Text="{Binding PackageQuantity, Converter={StaticResource DecimalConverter}, 
-                                    UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <TextBox x:Name="PackageQuantityTextBox" Margin="5"/>
 
             <Label Content="Минимальное количество:" Foreground="#546F94"/>
-            <TextBox x:Name="MinimumQuantityTextBox" Margin="5" 
-                     Text="{Binding MinimumQuantity, Converter={StaticResource DecimalConverter}, 
-                                    UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <TextBox x:Name="MinimumQuantityTextBox" Margin="5"/>
 
             <Label Content="Цена единицы материала:" Foreground="#546F94"/>
-            <TextBox x:Name="UnitPriceTextBox" Margin="5" 
-                     Text="{Binding UnitPrice, Converter={StaticResource DecimalConverter}, 
-                                    UpdateSourceTrigger=PropertyChanged, ValidatesOnDataErrors=True}"/>
+            <TextBox x:Name="UnitPriceTextBox" Margin="5"/>
         </StackPanel>
 
         <!-- Кнопки -->

@@ -63,11 +63,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Windows\CalculationHelper.cs" />
-    <Compile Include="Windows\DecimalConverter.cs" />
     <Compile Include="Windows\MaterialFormWindow.xaml.cs">
       <DependentUpon>MaterialFormWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Windows\MaterialViewModel.cs" />
     <Compile Include="Windows\SuppliersWindow.xaml.cs">
       <DependentUpon>SuppliersWindow.xaml</DependentUpon>
     </Compile>
